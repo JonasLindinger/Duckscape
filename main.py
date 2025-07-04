@@ -1,20 +1,34 @@
-﻿from Decision import *
+﻿from SkillPointSystem import *
+from Decision import *
 from Dialogs import *
 from Player import *
 
+# Run settings
+isDebugRun: bool = True
+
 # Story
-ask_for_name: Dialog1_Ask_for_name = Dialog1_Ask_for_name()
-ask_for_name.Run()
+if not isDebugRun:
+    ask_for_name: Dialog1_Ask_for_name = Dialog1_Ask_for_name()
+    ask_for_name.Run()
 
 # Create Character
-player: Player = Player(input("[Du] Ich heiße "))
-time.sleep(2)
+if not isDebugRun:
+    player: Player = Player(input("[Du] Ich heiße "))
+    time.sleep(2)
+else:
+    player: Player = Player("Tester")
 
-introduction_to_story: Dialog2_Introduction_to_story = Dialog2_Introduction_to_story(player)
-introduction_to_story.Run()
+if not isDebugRun:
+    introduction_to_story: Dialog2_Introduction_to_story = Dialog2_Introduction_to_story(player)
+    introduction_to_story.Run()
 
-ability_dialog: Dialog3_ability = Dialog3_ability(player)
-ability_dialog.Run()
+if not isDebugRun:
+    ability_dialog: Dialog3_ability = Dialog3_ability(player)
+    ability_dialog.Run()
+
+# Choose skills
+skillPointSystem: SkillPointSystem = SkillPointSystem(player)
+skillPointSystem.StartConfiguration()
 
 # Start adventure
 starting_decision: D1 = D1()
