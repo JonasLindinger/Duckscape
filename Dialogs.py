@@ -44,7 +44,7 @@ class Dialog3_ability:
     def Run(self):
         print("[Joseph] Wie würdest du dich beschreiben?")
         time.sleep(3)
-        print("[Joseph] Also stell` dir vor, du hasst 21 Punkte und die verteilst du jetzt auf Stärke, Intelligenz und Geschick. Dabei kann jede Eigenschaft maximal 10 Punkte haben.")
+        print("[Joseph] Also stell` dir vor, du hast 21 Punkte und die verteilst du jetzt auf Stärke, Intelligenz und Geschick. Dabei kann jede Eigenschaft maximal 10 Punkte haben.")
         time.sleep(4)
         print("[Joseph] Zum Beispiel würde ich mich so beschreiben:")
         time.sleep(3)
