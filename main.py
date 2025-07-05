@@ -6,6 +6,8 @@ from Player import *
 # Run settings
 isDebugRun: bool = True
 
+FRIEND_NAME: str = "Joseph"
+
 # Story
 if not isDebugRun:
     ask_for_name: Dialog1_Ask_for_name = Dialog1_Ask_for_name()

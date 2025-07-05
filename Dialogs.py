@@ -1,5 +1,6 @@
 ﻿import time
 from Player import *
+from main import *
 
 class Dialog1_Ask_for_name:
     def __init__(self):
@@ -17,7 +18,7 @@ class Dialog1_Ask_for_name:
         time.sleep(4)
         print("** Die Ente kommt näher, mustert dich. **")
         time.sleep(3)
-        print("[Fremde Ente] Ich heiße Joseph und du?")
+        print("[Fremde Ente] Ich heiße " + str(FRIEND_NAME) + " und du?")
         time.sleep(1)
 
 class Dialog2_Introduction_to_story:
@@ -26,15 +27,15 @@ class Dialog2_Introduction_to_story:
     def Run(self):
         print("** Die Ente nickt langsam. **")
         time.sleep(2)
-        print("[Joseph] Hmmm. " + self.player.name + " also. Klingt nicht nach einer Zoo-Ente. Klingt eher nach… einer Flucht.")
+        print("[" + str(FRIEND_NAME) + "] Hmmm. " + self.player.name + " also. Klingt nicht nach einer Zoo-Ente. Klingt eher nach… einer Flucht.")
         time.sleep(4)
         print("** Kurze Pause. Die Ente blinzelt verschwörerisch. **")
         time.sleep(3)
-        print("[Joseph] Wenn du hier raus willst – und ja, ich seh’s dir an – dann brauchst du mehr als hübsches Gefieder.")
+        print("[" + str(FRIEND_NAME) + "] Wenn du hier raus willst – und ja, ich seh’s dir an – dann brauchst du mehr als hübsches Gefieder.")
         time.sleep(4)
-        print("[Joseph] Lass uns zusammen ausbrechen!")
+        print("[" + str(FRIEND_NAME) + "] Lass uns zusammen ausbrechen!")
         time.sleep(2)
-        print("[Joseph] Aber bevor wir genaueres planen, lass uns erstmal kennen lernen.")
+        print("[" + str(FRIEND_NAME) + "] Aber bevor wir genaueres planen, lass uns erstmal kennen lernen.")
         time.sleep(2)
 
 class Dialog3_ability:
@@ -42,20 +43,20 @@ class Dialog3_ability:
         self.player: Player = player
 
     def Run(self):
-        print("[Joseph] Wie würdest du dich beschreiben?")
+        print("[" + str(FRIEND_NAME) + "] Wie würdest du dich beschreiben?")
         time.sleep(3)
-        print("[Joseph] Also stell` dir vor, du hast 21 Punkte und die verteilst du jetzt auf Stärke, Intelligenz und Geschick. Dabei kann jede Eigenschaft maximal 10 Punkte haben.")
+        print("[" + str(FRIEND_NAME) + "] Also stell` dir vor, du hast 21 Punkte und die verteilst du jetzt auf Stärke, Intelligenz und Geschick. Dabei kann jede Eigenschaft maximal 10 Punkte haben.")
         time.sleep(4)
-        print("[Joseph] Zum Beispiel würde ich mich so beschreiben:")
+        print("[" + str(FRIEND_NAME) + "] Zum Beispiel würde ich mich so beschreiben:")
         time.sleep(3)
-        print("[Joseph] Stärke: 7")
+        print("[" + str(FRIEND_NAME) + "] Stärke: 7")
         time.sleep(1)
-        print("[Joseph] Geschwindigkeit: 6")
+        print("[" + str(FRIEND_NAME) + "] Geschwindigkeit: 6")
         time.sleep(1)
-        print("[Joseph] Geschick: 4")
+        print("[" + str(FRIEND_NAME) + "] Geschick: 4")
         time.sleep(1)
-        print("[Joseph] Intelligenz: 4")
+        print("[" + str(FRIEND_NAME) + "] Intelligenz: 4")
         time.sleep(3)
-        print("[Joseph] Verstanden? 7 + 6 + 4 + 4 = 21")
+        print("[" + str(FRIEND_NAME) + "] Verstanden? 7 + 6 + 4 + 4 = 21")
         time.sleep(3)
-        print("[Joseph] Jetzt bist du dran!")
+        print("[" + str(FRIEND_NAME) + "] Jetzt bist du dran!")
