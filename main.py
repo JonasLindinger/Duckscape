@@ -2,6 +2,7 @@
 from Decision import *
 from Dialogs import *
 from Player import *
+import time
 
 # Run settings
 isDebugRun: bool = True
