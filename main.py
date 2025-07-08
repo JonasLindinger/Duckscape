@@ -5,9 +5,7 @@ from Player import *
 import time
 
 # Run settings
-isDebugRun: bool = True
-
-FRIEND_NAME: str = "Joseph"
+isDebugRun: bool = False
 
 # Story
 if not isDebugRun:
