@@ -32,5 +32,5 @@ skillPointSystem: SkillPointSystem = SkillPointSystem(player)
 skillPointSystem.StartConfiguration()
 
 # Start adventure
-starting_decision: D1 = D1()
+starting_decision: D1 = D1(player)
 starting_decision.Start()
