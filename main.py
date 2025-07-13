@@ -3,6 +3,7 @@ from Decision import *
 from Dialogs import *
 from Player import *
 import time
+from Story import *
 
 # Run settings
 isDebugRun: bool = True
@@ -38,6 +39,4 @@ else:
     player.skill = 10
     player.intelligence = 10
 
-# Start adventure
-starting_decision: D1 = D1(player)
-starting_decision.Start()
+RunStory(player)

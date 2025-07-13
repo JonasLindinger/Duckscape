@@ -1,0 +1,59 @@
+﻿{
+  "story_nodes": {
+    "start": {
+      "dialog": "Nacht im Zoo. Zeit für die Flucht!",
+      "choices": [
+        {
+          "text": "Durch den Wartungsbereich [Geschick]",
+          "requirements": {
+            "geschick": 5
+          },
+          "next": "D2"
+        },
+        {
+          "text": "Über den Zaun klettern [Stärke]",
+          "requirements": {
+            "staerke": 5
+          },
+          "next": "fence_climb"
+        },
+        {
+          "text": "Den Wärter ablenken [Intelligenz]",
+          "requirements": {
+            "intelligenz": 5
+          },
+          "next": "distract_guard"
+        }
+      ]
+    },
+    "D2": {
+      "dialog": "Du bist im Wartungsbereich. Was nun?",
+      "choices": [
+        {
+          "text": "Werkzeuge suchen [Intelligenz]",
+          "requirements": {
+            "intelligenz": 8
+          },
+          "next": "tools_search"
+        },
+        {
+          "text": "Durch Lüftung kriechen [Geschick]",
+          "requirements": {
+            "geschick": 7
+          },
+          "next": "ventilation"
+        }
+      ]
+    },
+    "ending_success": {
+      "dialog": "Du hast es geschafft! Die Freiheit wartet!",
+      "type": "ending",
+      "outcome": "success"
+    },
+    "ending_caught": {
+      "dialog": "Die Wärter haben dich erwischt. Zurück in den Käfig!",
+      "type": "ending",
+      "outcome": "failure"
+    }
+  }
+}

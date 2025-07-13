@@ -1,0 +1,239 @@
+﻿def RunStory(player: Player):
+    """Main story flow controller - All 15 decisions in sequence"""
+    Seperate()
+    print("[" + str(constants.FRIEND_NAME) + "] Los geht's! Die Nacht ist perfekt für unsere Flucht!")
+    time.sleep(2)
+
+    # Decision 1: Initial escape
+    choice = D1(player)
+    match choice:
+        case 1:  # Wartungsbereich
+            if player.skill < 5:
+                return EndingCaught(player)
+        case 2:  # Zaun
+            if player.strength < 6:
+                return EndingCaught(player)
+        case 3:  # Wärter
+            if player.intelligence < 5:
+                return EndingCaught(player)
+    print("** Erste Hürde geschafft! **")
+    time.sleep(2)
+
+    # Decision 2: Maintenance area
+    choice = D2(player)
+    match choice:
+        case 1:  # Werkzeuge
+            if player.intelligence < 6:
+                return EndingCaught(player)
+        case 2:  # Lüftung
+            if player.skill < 7:
+                return EndingCaught(player)
+        case 3:  # Tür
+            if player.strength < 7:
+                return EndingCaught(player)
+    print("** Du kommst voran! **")
+    time.sleep(2)
+
+    # Decision 3: Storage Room
+    choice = D3(player)
+    match choice:
+        case 1:  # Kartons
+            if player.strength < 6:
+                return EndingCaught(player)
+        case 2:  # Schlüssel
+            if player.intelligence < 7:
+                return EndingCaught(player)
+        case 3:  # Fenster
+            if player.skill < 6:
+                return EndingCaught(player)
+    print("** Der Lagerraum liegt hinter dir **")
+    time.sleep(2)
+
+    # Decision 4: Guard Post
+    choice = D4(player)
+    match choice:
+        case 1:  # Verstecken
+            if player.skill < 7:
+                return EndingCaught(player)
+        case 2:  # Geräusch
+            if player.intelligence < 7:
+                return EndingCaught(player)
+        case 3:  # Rennen
+            if player.speed < 7:
+                return EndingCaught(player)
+    print("** Der Wachposten bemerkt dich nicht **")
+    time.sleep(2)
+
+    # Decision 5: Delivery Area
+    choice = D5(player)
+    match choice:
+        case 1:  # LKW
+            if player.intelligence < 6:
+                return EndingCaught(player)
+        case 2:  # Kisten
+            if player.skill < 8:
+                return EndingCaught(player)
+        case 3:  # Tor
+            if player.strength < 8:
+                return EndingCaught(player)
+    print("** Die Lieferzone ist passiert **")
+    time.sleep(2)
+
+    # Decision 6: Vehicle Area
+    choice = D6(player)
+    match choice:
+        case 1:  # Verstecken
+            if player.skill < 7:
+                return EndingCaught(player)
+        case 2:  # Kurzschließen
+            if player.intelligence < 8:
+                return EndingCaught(player)
+        case 3:  # Zu Fuß
+            if player.speed < 8:
+                return EndingCaught(player)
+    print("** Du lässt die Fahrzeuge hinter dir **")
+    time.sleep(2)
+
+    # Decision 7: Main Gate
+    choice = D7(player)
+    match choice:
+        case 1:  # Pförtner
+            if player.intelligence < 8:
+                return EndingCaught(player)
+        case 2:  # Zaun
+            if player.strength < 8:
+                return EndingCaught(player)
+        case 3:  # Büsche
+            if player.skill < 8:
+                return EndingCaught(player)
+    print("** Das Haupttor ist geschafft! **")
+    time.sleep(2)
+
+    # Decision 8: Side Entrance
+    choice = D8(player)
+    match choice:
+        case 1:  # Schloss
+            if player.skill < 8:
+                return EndingCaught(player)
+        case 2:  # Tür
+            if player.strength < 9:
+                return EndingCaught(player)
+        case 3:  # Warten
+            if player.intelligence < 8:
+                return EndingCaught(player)
+    print("** Der Seiteneingang ist passiert **")
+    time.sleep(2)
+
+    # Decision 9: Park Area
+    choice = D9(player)
+    match choice:
+        case 1:  # Büsche
+            if player.skill < 8:
+                return EndingCaught(player)
+        case 2:  # Rennen
+            if player.speed < 9:
+                return EndingCaught(player)
+        case 3:  # Karte
+            if player.intelligence < 8:
+                return EndingCaught(player)
+    print("** Der Park liegt hinter dir **")
+    time.sleep(2)
+
+    # Decision 10: Street Corner
+    choice = D10(player)
+    match choice:
+        case 1:  # Bus
+            if player.intelligence < 8:
+                return EndingCaught(player)
+        case 2:  # Gassen
+            if player.skill < 9:
+                return EndingCaught(player)
+        case 3:  # Direkt
+            if player.speed < 9:
+                return EndingCaught(player)
+    print("** Die Straßenecke ist passiert **")
+    time.sleep(2)
+
+    # Decision 11: City Area
+    choice = D11(player)
+    match choice:
+        case 1:  # Bahnhof
+            if player.intelligence < 9:
+                return EndingCaught(player)
+        case 2:  # Park
+            if player.skill < 9:
+                return EndingCaught(player)
+        case 3:  # Bus
+            if player.speed < 9:
+                return EndingCaught(player)
+    print("** Die Stadt liegt vor dir **")
+    time.sleep(2)
+
+    # Decision 12: Transport Hub
+    choice = D12(player)
+    match choice:
+        case 1:  # Zug
+            if player.intelligence < 9:
+                return EndingCaught(player)
+        case 2:  # Taxi
+            if player.skill < 9:
+                return EndingCaught(player)
+        case 3:  # Zu Fuß
+            if player.speed < 10:
+                return EndingCaught(player)
+    print("** Der Verkehrsknotenpunkt ist geschafft **")
+    time.sleep(2)
+
+    # Decision 13: Final Approach
+    choice = D13(player)
+    match choice:
+        case 1:  # Vorstadt
+            if player.skill < 9:
+                return EndingCaught(player)
+        case 2:  # Wald
+            if player.strength < 9:
+                return EndingCaught(player)
+        case 3:  # Hauptstraße
+            if player.speed < 10:
+                return EndingCaught(player)
+    print("** Fast geschafft! **")
+    time.sleep(2)
+
+    # Decision 14: Last Obstacle
+    choice = D14(player)
+    match choice:
+        case 1:  # Umgehen
+            if player.intelligence < 10:
+                return EndingCaught(player)
+        case 2:  # Überwinden
+            if player.strength < 10:
+                return EndingCaught(player)
+        case 3:  # Durchschlüpfen
+            if player.skill < 10:
+                return EndingCaught(player)
+    print("** Das letzte Hindernis ist überwunden! **")
+    time.sleep(2)
+
+    # Decision 15: Final Choice - determines ending
+    final_choice = D15(player)
+    match final_choice:
+        case 1:  # Berge
+            if player.strength >= 8:
+                EndingSuccess(player, "mountains")
+            else:
+                EndingCaught(player)
+        case 2:  # Stadt
+            if player.intelligence >= 8:
+                EndingSuccess(player, "city")
+            else:
+                EndingCaught(player)
+        case 3:  # Meer
+            if player.skill >= 8:
+                EndingSuccess(player, "sea")
+            else:
+                EndingCaught(player)
+
+
+
+# Start adventure
+#RunStory(player)
