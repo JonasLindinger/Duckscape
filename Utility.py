@@ -68,3 +68,11 @@ class Skill_Question:
             except ValueError:
                 print("Bitte gib eine Zahl ein!")
                 continue
+
+def Seperate():
+    # Create space between old and new question
+    for i in range(2):
+        print("")
+
+    print("--------------------")
+    print("")

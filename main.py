@@ -5,7 +5,7 @@ from Player import *
 import time
 
 # Run settings
-isDebugRun: bool = False
+isDebugRun: bool = True
 
 # Story
 if not isDebugRun:
@@ -27,9 +27,16 @@ if not isDebugRun:
     ability_dialog: Dialog3_ability = Dialog3_ability(player)
     ability_dialog.Run()
 
-# Choose skills
-skillPointSystem: SkillPointSystem = SkillPointSystem(player)
-skillPointSystem.StartConfiguration()
+if not isDebugRun:
+    # Choose skills
+    skillPointSystem: SkillPointSystem = SkillPointSystem(player)
+    skillPointSystem.StartConfiguration()
+else:
+    player.pointsToSpend = 0
+    player.strength = 10
+    player.speed = 10
+    player.skill = 10
+    player.intelligence = 10
 
 # Start adventure
 starting_decision: D1 = D1(player)

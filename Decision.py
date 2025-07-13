@@ -1,18 +1,14 @@
 ﻿from Utility import *
 from constants import *
 from Player import *
+import random
 
 class D1:
     def __init__(self, player: Player):
         self.player: Player = player
 
     def Start(self):
-        # Create space between old and new question
-        for i in range(2):
-            print("")
-
-        print("--------------------")
-        print("")
+        Seperate()
 
         # Ask Question
         question_message: str = "Wie willst du und " + constants.FRIEND_NAME + " aus deinem Gehege kommen?"
@@ -28,11 +24,11 @@ class D1:
         next = None
         match choice:
             case 1:
-                next: D1_1_1 = D1_1_1(self.player)
+                next: D1_1 = D1_1(self.player)
             case 2:
-                next: D1_2_1 = D1_2_1(self.player)
+                next: D1_2 = D1_2(self.player)
             case 3:
-                next: D1_3_1 = D1_3_1(self.player)
+                next: D1_3 = D1_3(self.player)
             case 4:
                 next: D1_4_1 = D1_4_1(self.player)
 
@@ -46,17 +42,12 @@ class D1:
 
 # ----- Cheapter 1: The Cage -----
 
-class D1_1_1:
+class D1_1:
     def __init__(self, player: Player):
         self.player: Player = player
 
     def Start(self):
-        # Create space between old and new question
-        for i in range(2):
-            print("")
-
-        print("--------------------")
-        print("")
+        Seperate()
 
         # Todo: Add Dialog
 
@@ -69,17 +60,12 @@ class D1_1_1:
         next: D2 = D2(self.player)
         next.Start()
 
-class D1_2_1:
+class D1_2:
     def __init__(self, player: Player):
         self.player: Player = player
 
     def Start(self):
-        # Create space between old and new question
-        for i in range(2):
-            print("")
-
-        print("--------------------")
-        print("")
+        Seperate()
 
         # Todo: Add Dialog
 
@@ -92,19 +78,12 @@ class D1_2_1:
         next: D2 = D2(self.player)
         next.Start()
 
-class D1_3_1:
+class D1_3:
     def __init__(self, player: Player):
         self.player: Player = player
 
     def Start(self):
-        # Create space between old and new question
-        for i in range(2):
-            print("")
-
-        # Todo: Add Dialog
-
-        print("--------------------")
-        print("")
+        Seperate()
 
         # Check if the player has the skill for this way.
         if (self.player.strength < 10 or self.player.skill < 10):
@@ -120,14 +99,7 @@ class D1_4_1:
         self.player: Player = player
 
     def Start(self):
-         # Create space between old and new question
-        for i in range(2):
-            print("")
-
-        # Todo: Add Dialog
-
-        print("--------------------")
-        print("")
+        Seperate()
 
         # Check if the player has the skill for this way.
         if (False):
@@ -142,14 +114,7 @@ class D1_4_2:
         self.player: Player = player
 
     def Start(self):
-         # Create space between old and new question
-        for i in range(2):
-            print("")
-
-        # Todo: Add Dialog
-
-        print("--------------------")
-        print("")
+        Seperate()
 
         # Check if the player has the skill for this way.
         if (False):
@@ -185,14 +150,7 @@ class D1_4_2_1:
         self.player: Player = player
 
     def Start(self):
-         # Create space between old and new question
-        for i in range(2):
-            print("")
-
-        # Todo: Add Dialog
-
-        print("--------------------")
-        print("")
+        Seperate()
 
         # Check if the player has the skill for this way.
         if (True):
@@ -206,14 +164,7 @@ class D1_4_2_2:
         self.player: Player = player
 
     def Start(self):
-         # Create space between old and new question
-        for i in range(2):
-            print("")
-
-        # Todo: Add Dialog
-
-        print("--------------------")
-        print("")
+        Seperate()
 
         next = None
         # Check if the player has the skill for this way.
@@ -236,5 +187,67 @@ class D2:
         self.player: Player = player
 
     def Start(self):
-        # Todo: Continue the story
-        pass
+        Seperate()
+
+        # Ask Question
+        question_message: str = "Wie willst du aus dem Zoo entkommen?"
+        question_answers: list = ["In einem Auto verstecken.",
+                                  "Werter suchen.",
+                                  "Kind suchen."]
+        question: Question = Question(question_message, question_answers)
+        choice: int = question.Ask()
+
+        next = None
+        match choice:
+            case 1:
+                next: D2_1_1 = D2_1_1(self.player)
+            case 2:
+                next: D2_2 = D2_2(self.player)
+            case 3:
+                next: D2_3 = D2_3(self.player)
+
+        if (next == None):
+            raise RuntimeError("No valid decision was made.")
+
+        next.Start()
+
+class D2_1_1:
+    def __init__(self, player: Player) -> None:
+        self.player: Player = player
+
+    def Start(self):
+        Seperate()
+
+        # Todo: DO story stuff
+
+class D2_2:
+    def __init__(self, player: Player) -> None:
+        self.player: Player = player
+
+    def Start(self):
+        Seperate()
+
+        # Todo: DO story stuff
+
+class D2_3:
+    def __init__(self, player: Player) -> None:
+        self.player: Player = player
+
+    def Start(self):
+        Seperate()
+
+        # Generate a random number between 0 and 1
+        roll = random.random()
+
+        # If the number is less than 0.1 (10%) => pass
+        # Otherwise (90% of the time), => not pass
+        successful: bool = roll < 0.1
+
+        if not successful:
+            # Player can't pass!
+            # End: You were caught by the parents, and they brought you back to the zoo.
+            return
+
+        # Todo: Add Dialog
+
+        # End: Kid let you be free
