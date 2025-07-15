@@ -27,8 +27,8 @@ class StoryManager:
 
         # Show dialog
         dialog: str = node.dialog
-        dialog.replace("YOUR_NAME", player.name)
-        dialog.replace("YOUR_FRIEND_NAME", constants.FRIEND_NAME)
+        dialog = dialog.replace("YOUR_NAME", player.name)
+        dialog = dialog.replace("YOUR_FRIEND_NAME", constants.FRIEND_NAME)
         print(dialog)
         time.sleep(2)
 
@@ -48,8 +48,8 @@ class StoryManager:
         choices = []
         for choice in node.choices:
             text: str = choice["text"]
-            text.replace("YOUR_NAME", player.name)
-            text.replace("YOUR_FRIEND_NAME", constants.FRIEND_NAME)
+            text = text.replace("YOUR_NAME", player.name)
+            text = text.replace("YOUR_FRIEND_NAME", constants.FRIEND_NAME)
             choices.append(text) # Append the choice text (description)
 
         # Ask question / Show choices

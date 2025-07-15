@@ -2,7 +2,7 @@
 {
   "story_nodes": {
     "start": {
-      "dialog": "Kapitel 1: Der Käfig\nDu bist in einem Käfig eingesperrt. Was möchtest du tun?",
+      "dialog": "Kapitel 1: Der Käfig\nDu und YOUR_FRIEND_NAME sind in einem Käfig eingesperrt. Was möchtet ihr tun?",
       "choices": [
         {
           "text": "Versuche über den Zaun zu fliegen",
