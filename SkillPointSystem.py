@@ -10,14 +10,11 @@ class SkillPointSystem:
         # Strength
         self.AskStrength()
 
-        # Speed
-        self.AskSpeed()
-
-        # Skill
-        self.AskSkill()
-
         # Intelligence
         self.AskIntelligence()
+
+        # Skill
+        self.AskLuck()
 
         # Ask if everything is fine or if changes should be made.
         while True:
@@ -29,9 +26,8 @@ class SkillPointSystem:
                 "Ich bin zufrieden.",
                 "Ich möchte alles neu machen.",
                 "Ich möchte meine Stärke ändern.",
-                "Ich möchte meine Geschwindigkeit ändern.",
-                "Ich möchte mein Geschick ändern.",
                 "Ich möchte mein Intelligenz ändern."
+                "Ich möchte mein Glück ändern.",
             ]
             question: Question = Question(question_message, question_answers)
             answer: int = question.Ask()
@@ -47,12 +43,10 @@ class SkillPointSystem:
                     break
                 case 3: # Ask strength
                     self.AskStrength()
-                case 4: # Ask speed
-                    self.AskSpeed()
-                case 5: # Ask skill
-                    self.AskSkill()
-                case 6:
+                case 4: # Ask Intelligence
                     self.AskIntelligence()
+                case 5: # Ask luck
+                    self.AskLuck()
 
     def AskStrength(self):
         # Strength
@@ -77,48 +71,6 @@ class SkillPointSystem:
         # Set the new value
         self.player.strength = strength
 
-    def AskSpeed(self):
-        # Speed
-        question_min_included: int = 0
-        question_max_included: int = -1
-        question_message: str = ""
-        if self.player.speed > 0:
-            question_message: str = "Setzte die Punkte für Geschwindigkeit(" + str(self.player.speed) + ")  (" + str(self.player.pointsToSpend) + " Punkte Übrig.)"
-            question_max_included = self.player.speed
-        else:
-            question_message: str = "Setzte die Punkte für Geschwindigkeit (" + str(self.player.pointsToSpend) + " Punkte Übrig.)"
-            question_max_included = min(self.player.pointsToSpend, 10)
-        skill_question: Skill_Question = Skill_Question(question_message, question_min_included, question_max_included)
-        speed: int = skill_question.Ask()
-
-        # Subtract or Add points depending on the previous value.
-        additiveNumber: int = self.player.speed - speed
-        self.player.pointsToSpend += additiveNumber
-
-        # Set the new value
-        self.player.speed = speed
-
-    def AskSkill(self):
-        # Skill
-        question_min_included: int = 0
-        question_max_included: int = -1
-        question_message: str = ""
-        if self.player.skill > 0:
-            question_message: str = "Setzte die Punkte für Geschick(" + str(self.player.skill) + ")  (" + str(self.player.pointsToSpend) + " Punkte Übrig.)"
-            question_max_included = self.player.skill
-        else:
-            question_message: str = "Setzte die Punkte für Geschick (" + str(self.player.pointsToSpend) + " Punkte Übrig.)"
-            question_max_included = min(self.player.pointsToSpend, 10)
-        skill_question: Skill_Question = Skill_Question(question_message, question_min_included, question_max_included)
-        skill: int = skill_question.Ask()
-
-        # Subtract or Add points depending on the previous value.
-        additiveNumber: int = self.player.skill - skill
-        self.player.pointsToSpend += additiveNumber
-
-        # Set the new value
-        self.player.skill = skill
-
     def AskIntelligence(self):
         # Intelligence
         question_min_included: int = 0
@@ -139,3 +91,24 @@ class SkillPointSystem:
 
         # Set the new value
         self.player.intelligence = intelligence
+
+    def AskLuck(self):
+        # Speed
+        question_min_included: int = 0
+        question_max_included: int = -1
+        question_message: str = ""
+        if self.player.luck > 0:
+            question_message: str = "Setzte die Punkte für Glück(" + str(self.player.luck) + ")  (" + str(self.player.pointsToSpend) + " Punkte Übrig.)"
+            question_max_included = self.player.luck
+        else:
+            question_message: str = "Setzte die Punkte für Glück (" + str(self.player.pointsToSpend) + " Punkte Übrig.)"
+            question_max_included = min(self.player.pointsToSpend, 10)
+        skill_question: Skill_Question = Skill_Question(question_message, question_min_included, question_max_included)
+        luck: int = skill_question.Ask()
+
+        # Subtract or Add points depending on the previous value.
+        additiveNumber: int = self.player.luck - luck
+        self.player.pointsToSpend += additiveNumber
+
+        # Set the new value
+        self.player.luck = luck

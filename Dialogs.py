@@ -1,4 +1,6 @@
 ﻿import time
+
+import Player
 from constants import *
 from Player import *
 
@@ -49,14 +51,12 @@ class Dialog3_ability:
         time.sleep(4)
         print("[" + str(constants.FRIEND_NAME) + "] Zum Beispiel würde ich mich so beschreiben:")
         time.sleep(3)
-        print("[" + str(constants.FRIEND_NAME) + "] Stärke: 7")
+        print("[" + str(constants.FRIEND_NAME) + "] Stärke: 6")
         time.sleep(1)
-        print("[" + str(constants.FRIEND_NAME) + "] Geschwindigkeit: 6")
+        print("[" + str(constants.FRIEND_NAME) + "] Intelligenz: 5")
         time.sleep(1)
-        print("[" + str(constants.FRIEND_NAME) + "] Geschick: 4")
-        time.sleep(1)
-        print("[" + str(constants.FRIEND_NAME) + "] Intelligenz: 4")
-        time.sleep(3)
-        print("[" + str(constants.FRIEND_NAME) + "] Verstanden? 7 + 6 + 4 + 4 = 21")
+        print("[" + str(constants.FRIEND_NAME) + "] Glück: 5")
+        time.sleep(2)
+        print("[" + str(constants.FRIEND_NAME) + "] Verstanden? 8 + 4 + 4 = " + str(Player.CONST_STARTING_POINTS_TO_SPEND))
         time.sleep(3)
         print("[" + str(constants.FRIEND_NAME) + "] Jetzt bist du dran!")
