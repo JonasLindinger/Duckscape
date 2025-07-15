@@ -1,12 +1,9 @@
 ﻿from SkillPointSystem import *
-from Decision import *
 from Dialogs import *
-from Player import *
-import time
 from Story import *
 
 # Run settings
-isDebugRun: bool = True
+isDebugRun: bool = False
 
 # Story
 if not isDebugRun:

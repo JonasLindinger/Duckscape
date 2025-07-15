@@ -47,7 +47,7 @@ class Dialog3_ability:
     def Run(self):
         print("[" + str(constants.FRIEND_NAME) + "] Wie würdest du dich beschreiben?")
         time.sleep(3)
-        print("[" + str(constants.FRIEND_NAME) + "] Also stell` dir vor, du hast 21 Punkte und die verteilst du jetzt auf Stärke, Intelligenz und Geschick. Dabei kann jede Eigenschaft maximal 10 Punkte haben.")
+        print("[" + str(constants.FRIEND_NAME) + "] Also stell` dir vor, du hast "+ str(Player.CONST_STARTING_POINTS_TO_SPEND) + " Punkte und die verteilst du jetzt auf Stärke, Intelligenz und Geschick. Dabei kann jede Eigenschaft maximal 10 Punkte haben.")
         time.sleep(4)
         print("[" + str(constants.FRIEND_NAME) + "] Zum Beispiel würde ich mich so beschreiben:")
         time.sleep(3)
@@ -57,6 +57,6 @@ class Dialog3_ability:
         time.sleep(1)
         print("[" + str(constants.FRIEND_NAME) + "] Glück: 5")
         time.sleep(2)
-        print("[" + str(constants.FRIEND_NAME) + "] Verstanden? 8 + 4 + 4 = " + str(Player.CONST_STARTING_POINTS_TO_SPEND))
+        print("[" + str(constants.FRIEND_NAME) + "] Verstanden? 6 + 5 + 5 = " + str(Player.CONST_STARTING_POINTS_TO_SPEND))
         time.sleep(3)
         print("[" + str(constants.FRIEND_NAME) + "] Jetzt bist du dran!")

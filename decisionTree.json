@@ -1,57 +1,141 @@
-﻿{
+﻿
+{
   "story_nodes": {
     "start": {
-      "dialog": "Nacht im Zoo. Zeit für die Flucht!",
+      "dialog": "Kapitel 1: Der Käfig\nDu bist in einem Käfig eingesperrt. Was möchtest du tun?",
       "choices": [
         {
-          "text": "Durch den Wartungsbereich [Geschick]",
-          "requirements": {
-            "geschick": 5
-          },
-          "next": "D2"
+          "text": "Versuche über den Zaun zu fliegen",
+          "next": "try_fly_over"
         },
         {
-          "text": "Über den Zaun klettern [Stärke]",
-          "requirements": {
-            "staerke": 5
-          },
-          "next": "fence_climb"
+          "text": "Fliege auf einen Baum",
+          "next": "fly_to_tree"
         },
         {
-          "text": "Den Wärter ablenken [Intelligenz]",
-          "requirements": {
-            "intelligenz": 5
-          },
-          "next": "distract_guard"
+          "text": "Inspiziere den Zaun",
+          "next": "inspect_fence"
+        },
+        {
+          "text": "Warte darauf gefüttert zu werden",
+          "next": "wait_for_food"
         }
       ]
     },
-    "D2": {
-      "dialog": "Du bist im Wartungsbereich. Was nun?",
+    "try_fly_over": {
+      "dialog": "Du versuchst über den Zaun zu fliegen, aber es klappt nicht. Du landest wieder im Käfig.",
       "choices": [
         {
-          "text": "Werkzeuge suchen [Intelligenz]",
-          "requirements": {
-            "intelligenz": 8
-          },
-          "next": "tools_search"
+          "text": "Zurück zum Start",
+          "next": "start"
+        }
+      ]
+    },
+    "fly_to_tree": {
+      "dialog": "Du fliegst auf einen Baum. Was möchtest du von hier aus tun?",
+      "choices": [
+        {
+          "text": "Fliege über den Zaun",
+          "next": "chapter_2"
         },
         {
-          "text": "Durch Lüftung kriechen [Geschick]",
+          "text": "Beobachte die Umgebung",
+          "next": "observe"
+        }
+      ]
+    },
+    "observe": {
+      "dialog": "Du beobachtest die Umgebung. Was möchtest du tun?",
+      "choices": [
+        {
+          "text": "Warte auf eine Gelegenheit",
+          "next": "chapter_2"
+        },
+        {
+          "text": "Trixe den Wärter aus",
           "requirements": {
+            "intelligenz": 7
+          },
+          "next": "chapter_2"
+        }
+      ]
+    },
+    "inspect_fence": {
+      "dialog": "Du untersuchst den Zaun genau. Was möchtest du tun?",
+      "choices": [
+        {
+          "text": "Suche nach einem Loch",
+          "next": "chapter_2"
+        },
+        {
+          "text": "Reiße ein Loch in den Zaun",
+          "requirements": {
+            "staerke": 8
+          },
+          "next": "chapter_2"
+        }
+      ]
+    },
+    "wait_for_food": {
+      "dialog": "Du wartest darauf, gefüttert zu werden. Was ist dein Plan?",
+      "choices": [
+        {
+          "text": "Inspiziere das Tor",
+          "requirements": {
+            "intelligenz": 6
+          },
+          "next": "chapter_2"
+        },
+        {
+          "text": "Greife den Wärter an und stiehl den Schlüssel",
+          "requirements": {
+            "staerke": 9,
             "geschick": 7
           },
-          "next": "ventilation"
+          "next": "chapter_2"
+        }
+      ]
+    },
+    "chapter_2": {
+      "dialog": "Kapitel 2: Der Zoo\nDu hast es aus dem Käfig geschafft! Was nun?",
+      "choices": [
+        {
+          "text": "Kind suchen",
+          "requirements": {
+            "luck": 8
+          },
+          "next": "ending_success"
+        },
+        {
+          "text": "Kiste suchen zum Verstecken",
+          "next": "hide_box"
+        },
+        {
+          "text": "Ausgang suchen",
+          "next": "ending_caught"
+        }
+      ]
+    },
+    "hide_box": {
+      "dialog": "Du hast eine Kiste gefunden. Was möchtest du tun?",
+      "choices": [
+        {
+          "text": "Rausgehen",
+          "next": "ending_caught"
+        },
+        {
+          "text": "Drinnen bleiben",
+          "next": "ending_success"
         }
       ]
     },
     "ending_success": {
-      "dialog": "Du hast es geschafft! Die Freiheit wartet!",
+      "dialog": "Gratulation! Du hast es geschafft zu entkommen!",
       "type": "ending",
       "outcome": "success"
     },
     "ending_caught": {
-      "dialog": "Die Wärter haben dich erwischt. Zurück in den Käfig!",
+      "dialog": "Oh nein! Du wurdest gefangen und zurück in den Käfig gebracht.",
       "type": "ending",
       "outcome": "failure"
     }
