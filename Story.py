@@ -1,6 +1,7 @@
 ﻿from JsonTypes import *
 from JsonReader import *
 from Player import *
+from constants import *
 import time
 
 from Utility import Question, Seperate
@@ -25,7 +26,10 @@ class StoryManager:
         node = StoryNode(node_data)
 
         # Show dialog
-        print(node.dialog) # Todo: Do more advanced printing.
+        dialog: str = node.dialog
+        dialog.replace("YOUR_NAME", player.name)
+        dialog.replace("YOUR_FRIEND_NAME", constants.FRIEND_NAME)
+        print(dialog)
         time.sleep(2)
 
         # Check if the node is an ending
@@ -43,7 +47,10 @@ class StoryManager:
         # Get choices
         choices = []
         for choice in node.choices:
-            choices.append(choice["text"]) # Append the choice text (description)
+            text: str = choice["text"]
+            text.replace("YOUR_NAME", player.name)
+            text.replace("YOUR_FRIEND_NAME", constants.FRIEND_NAME)
+            choices.append(text) # Append the choice text (description)
 
         # Ask question / Show choices
         answer = Question("Was möchtest du tun?", choices).Ask()
