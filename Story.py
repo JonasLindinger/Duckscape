@@ -3,7 +3,7 @@ from JsonReader import *
 from Player import *
 import time
 
-from Utility import Question
+from Utility import Question, Seperate
 
 
 class StoryManager:
@@ -12,6 +12,8 @@ class StoryManager:
         self.current_node = "start"
 
     def run_node(self, player: Player) -> bool:
+        Seperate()
+
         # Get Current Node
         if self.current_node in self.story_data["story_nodes"]:  # Check if the node exists in our json file
             node_data = self.story_data["story_nodes"][self.current_node] # Get the current node, now that we know it exists.
@@ -65,12 +67,10 @@ class StoryManager:
         match skill:
             case "staerke":
                 return player.strength >= value
-            case "geschick":
-                return player.skill >= value
             case "intelligenz":
                 return player.intelligence >= value
-            case "geschwindigkeit":
-                return player.speed >= value
+            case "luck":
+                return player.luck >= value
         return False
 
 def RunStory(player: Player):
