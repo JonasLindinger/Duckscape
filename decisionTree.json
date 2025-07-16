@@ -5,7 +5,7 @@
       "dialog": "Kapitel 1: Der Käfig\n[YOUR_FRIEND_NAME] Gut... Wie wollen wir ausbrechen?",
       "choices": [
         {
-          "text": "[Du] Lass uns über den Zaun zu fliegen",
+          "text": "[Du] Lass uns über den Zaun fliegen",
           "next": "try_fly_over"
         },
         {
