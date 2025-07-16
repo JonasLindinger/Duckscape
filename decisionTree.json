@@ -102,27 +102,27 @@
       ]
     },
     "chapter_2": {
-      "dialog": "Kapitel 2: Der Zoo\nDu und YOUR_FRIEND_NAME habt es aus dem Käfig geschafft! Was nun?",
+      "dialog": "Kapitel 2: Der Zoo\n ** Du und YOUR_FRIEND_NAME habt es aus dem Käfig geschafft! ** \n[YOUR_FRIEND_NAME] Der größteil ist geschafft. Was jetzt? Wie kommen wir aus dem Zoo raus?",
       "choices": [
         {
-          "text": "Kind suchen",
+          "text": "[Du] Lass uns ein Kind suchen...",
           "requirements": {
             "glück": 8
           },
-          "next": "ending_success"
+          "next": "ending_success_kid"
         },
         {
-          "text": "Kiste suchen zum Verstecken",
+          "text": "[Du] Da vorne ist eine Kiste. Lass uns da rein gehen und abwarten",
           "next": "hide_box"
         },
         {
-          "text": "Ausgang suchen",
+          "text": "[Du] Lass uns nach einem Ausgang suchen",
           "next": "ending_caught"
         }
       ]
     },
     "hide_box": {
-      "dialog": "Ihr seit in der Kiste und wurdet ein paar minuten lang weg getragen und abgestellt.",
+      "dialog": "** Ihr seit in der Kiste und wurdet ein paar Minuten lang weg getragen und abgestellt. ** \n[YOUR_FRIEND_NAME] Was jetzt?",
       "choices": [
         {
           "text": "Rausgehen",
@@ -136,6 +136,16 @@
     },
     "ending_success": {
       "dialog": "Gratulation! Ihr habt es geschafft zu entkommen!",
+      "type": "ending",
+      "outcome": "success"
+    },
+    "ending_success_box": {
+      "dialog": "** Gratulation! Ihr wurdet rausgetragen und seit jetzt Frei **",
+      "type": "ending",
+      "outcome": "success"
+    },
+    "ending_success_kid": {
+      "dialog": "** Gratulation! Ihr habt ein Kind gefunden. Es war so fasziniert von euch, dass es euch nach draußen geschmuggelt hat. Die Eltern und die Zoo Wärter haben dabei nichts gemerkt. **",
       "type": "ending",
       "outcome": "success"
     },
