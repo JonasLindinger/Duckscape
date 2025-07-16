@@ -50,7 +50,7 @@
         {
           "text": "[Du] Lass uns warten, bis wir keinen Wärter sehen und über den Zaun fliegen.",
           "requirements": {
-            "stearke": 5
+            "staerke": 5
           },
           "next": "chapter_2"
         },
