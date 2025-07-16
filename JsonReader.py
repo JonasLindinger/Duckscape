@@ -8,6 +8,6 @@ def Read_Json_File(fileName: str):
             data = json.load(file)
             dataToReturn = data
     except Exception as e:
-        print(f"Ein Fehler ist aufgetreten: {e}")
+        print("Ein Fehler ist aufgetreten: " + str(e))
 
     return dataToReturn

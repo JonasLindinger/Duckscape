@@ -26,7 +26,7 @@ class SkillPointSystem:
                 "Ich bin zufrieden.",
                 "Ich möchte alles neu machen.",
                 "Ich möchte meine Stärke ändern.",
-                "Ich möchte mein Intelligenz ändern."
+                "Ich möchte meine Intelligenz ändern.",
                 "Ich möchte mein Glück ändern.",
             ]
             question: Question = Question(question_message, question_answers)
