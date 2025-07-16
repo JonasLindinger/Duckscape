@@ -2,28 +2,28 @@
 {
   "story_nodes": {
     "start": {
-      "dialog": "Kapitel 1: Der Käfig\nDu und YOUR_FRIEND_NAME sind in einem Käfig eingesperrt. Wie wollt ihr fliehen?",
+      "dialog": "Kapitel 1: Der Käfig\n[YOUR_FRIEND_NAME] Gut... Wie wollen wir ausbrechen?",
       "choices": [
         {
-          "text": "Versucht über den Zaun zu fliegen",
+          "text": "[Du] Lass uns über den Zaun zu fliegen",
           "next": "try_fly_over"
         },
         {
-          "text": "Fliegt auf einen Baum",
+          "text": "[Du] Lass uns auf einen Baum fliegen",
           "next": "fly_to_tree"
         },
         {
-          "text": "Inspiziert den Zaun",
+          "text": "[Du] Lass uns den Zaun mal genauer anschauen",
           "next": "inspect_fence"
         },
         {
-          "text": "Wartet darauf gefüttert zu werden",
+          "text": "[Du] Lass uns auf einen Wärter warten, der uns füttert.",
           "next": "wait_for_food"
         }
       ]
     },
     "try_fly_over": {
-      "dialog": "Ihr versucht über den Zaun zu fliegen, aber es klappt nicht. Ihr landet wieder im Käfig.",
+      "dialog": "** Ihr versucht über den Zaun zu fliegen, aber es klappt nicht. Ihr landet wieder im Käfig. **\n [YOUR_FRIEND_NAME] Das war wohl nix. Ich wusste ich hätte weniger essen sollen.",
       "choices": [
         {
           "text": "Zurück zum Start",
@@ -32,27 +32,30 @@
       ]
     },
     "fly_to_tree": {
-      "dialog": "Ihr fliegt auf einen Baum. Was möchtet ihr von hier aus tun?",
+      "dialog": "** Ihr fliegt auf einen Baum. ** \n[YOUR_FRIEND_NAME] Geschafft. Was jetzt?",
       "choices": [
         {
-          "text": "Fliegt über den Zaun",
-          "next": "chapter_2"
+          "text": "[Du] Lass uns von hier über den Zaun fliegen.",
+          "next": "ending_caught"
         },
         {
-          "text": "Beobachtet die Umgebung",
+          "text": "[Du] Lass uns beobachten und auf eine chance warten.",
           "next": "observe"
         }
       ]
     },
     "observe": {
-      "dialog": "Ihr beobachtet die Umgebung. Was möchtet ihr tun?",
+      "dialog": "** Ihr beobachtet die Umgebung. ** \n[YOUR_FRIEND_NAME] Auf was genau warten wir?",
       "choices": [
         {
-          "text": "Wartet auf eine Gelegenheit",
+          "text": "[Du] Lass uns warten, bis wir keinen Wärter sehen und über den Zaun fliegen.",
+          "requirements": {
+            "stearke": 5
+          },
           "next": "chapter_2"
         },
         {
-          "text": "Trixt den Wärter aus",
+          "text": "[Du] Lass uns den Wärter so ablenken, dass immer einer von uns rüber kann.",
           "requirements": {
             "intelligenz": 7
           },
@@ -61,36 +64,38 @@
       ]
     },
     "inspect_fence": {
-      "dialog": "Ihr untersucht den Zaun genau. Was möchtet ihr tun?",
+      "dialog": "[YOUR_FRIEND_NAME] Nach was genau suchen wir?",
       "choices": [
         {
-          "text": "Sucht nach einem Loch",
+          "text": "[Du] Lass uns nach einem Loch suchen.",
           "next": "chapter_2"
         },
         {
-          "text": "Reißt ein Loch in den Zaun",
+          "text": "[Du] Lass uns einfach ein Loch in den Zaun reißen.",
           "requirements": {
-            "staerke": 8
+            "staerke": 9
           },
           "next": "chapter_2"
         }
       ]
     },
     "wait_for_food": {
-      "dialog": "Ihr werdet gefüttert und ein Wärter ist in eurem Gehege.",
+      "dialog": "** Ihr werdet gefüttert und ein Wärter ist in eurem Gehege. ** \n[YOUR_FRIEND_NAME] Darauf haben wir gewartet. Was jetzt?",
       "choices": [
         {
-          "text": "Inspiziert das Tor",
+          "text": "[Du] Lass uns mal zum Tor gehen. Vielleicht ist die Türe nicht abgeschlossen.",
           "requirements": {
-            "intelligenz": 6
+            "intelligenz": 6,
+            "glück": 5
           },
           "next": "chapter_2"
         },
         {
-          "text": "Greift den Wärter an und stehlt den Schlüssel",
+          "text": "[Du] Greift den Wärter an und stehlt den Schlüssel",
           "requirements": {
             "staerke": 9,
-            "geschick": 7
+            "glück": 3,
+            "intelligenz": 3
           },
           "next": "chapter_2"
         }
@@ -102,7 +107,7 @@
         {
           "text": "Kind suchen",
           "requirements": {
-            "luck": 8
+            "glück": 8
           },
           "next": "ending_success"
         },
@@ -135,7 +140,7 @@
       "outcome": "success"
     },
     "ending_caught": {
-      "dialog": "Oh nein! Ihr wurdet gefangen und wurdet zurück in den Käfig gebracht.",
+      "dialog": "Oh nein! Ihr wurdet entdeckt, gefangen und wurdet zurück in den Käfig gebracht.",
       "type": "ending",
       "outcome": "failure"
     }

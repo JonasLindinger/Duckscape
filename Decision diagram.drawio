@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.0.4">
   <diagram name="Page-1" id="-VZwadmtGIWvrwY4ltmh">
-    <mxGraphModel dx="2724" dy="2368" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2068" dy="1924" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -34,15 +34,7 @@
         <mxCell id="yY6zUu2VjB5jSB4ByoQh-8" value="Fliege auf einen Baum" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="565" y="10" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="yY6zUu2VjB5jSB4ByoQh-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="yY6zUu2VjB5jSB4ByoQh-10" target="yY6zUu2VjB5jSB4ByoQh-34" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="625" y="350" />
-              <mxPoint x="425" y="350" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="yY6zUu2VjB5jSB4ByoQh-10" value="Fliege über den Zaun" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="yY6zUu2VjB5jSB4ByoQh-10" value="Fliege über den Zaun" style="ellipse;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" parent="1" vertex="1">
           <mxGeometry x="565" y="170" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="yY6zUu2VjB5jSB4ByoQh-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="yY6zUu2VjB5jSB4ByoQh-12" target="yY6zUu2VjB5jSB4ByoQh-14" edge="1">
@@ -139,43 +131,43 @@
         <mxCell id="yY6zUu2VjB5jSB4ByoQh-32" value="Kreift den Werter an und stehlt den Schlüssel und öffnet die Tür" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
           <mxGeometry x="365" y="-310" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="crSbYHDmSzXv--COdyXd-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yY6zUu2VjB5jSB4ByoQh-34" target="crSbYHDmSzXv--COdyXd-1">
+        <mxCell id="crSbYHDmSzXv--COdyXd-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="yY6zUu2VjB5jSB4ByoQh-34" target="crSbYHDmSzXv--COdyXd-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="crSbYHDmSzXv--COdyXd-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yY6zUu2VjB5jSB4ByoQh-34" target="crSbYHDmSzXv--COdyXd-3">
+        <mxCell id="crSbYHDmSzXv--COdyXd-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="yY6zUu2VjB5jSB4ByoQh-34" target="crSbYHDmSzXv--COdyXd-3" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="crSbYHDmSzXv--COdyXd-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yY6zUu2VjB5jSB4ByoQh-34" target="crSbYHDmSzXv--COdyXd-5">
+        <mxCell id="crSbYHDmSzXv--COdyXd-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="yY6zUu2VjB5jSB4ByoQh-34" target="crSbYHDmSzXv--COdyXd-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="yY6zUu2VjB5jSB4ByoQh-34" value="Cheapter 2: The Zoo" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="365" y="560" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="crSbYHDmSzXv--COdyXd-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="crSbYHDmSzXv--COdyXd-1" target="crSbYHDmSzXv--COdyXd-13">
+        <mxCell id="crSbYHDmSzXv--COdyXd-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="crSbYHDmSzXv--COdyXd-1" target="crSbYHDmSzXv--COdyXd-13" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="crSbYHDmSzXv--COdyXd-1" value="Kind suchen" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+        <mxCell id="crSbYHDmSzXv--COdyXd-1" value="Kind suchen" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
           <mxGeometry x="365" y="720" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="crSbYHDmSzXv--COdyXd-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="crSbYHDmSzXv--COdyXd-3" target="crSbYHDmSzXv--COdyXd-7">
+        <mxCell id="crSbYHDmSzXv--COdyXd-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="crSbYHDmSzXv--COdyXd-3" target="crSbYHDmSzXv--COdyXd-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="crSbYHDmSzXv--COdyXd-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="crSbYHDmSzXv--COdyXd-3" target="crSbYHDmSzXv--COdyXd-9">
+        <mxCell id="crSbYHDmSzXv--COdyXd-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="crSbYHDmSzXv--COdyXd-3" target="crSbYHDmSzXv--COdyXd-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="crSbYHDmSzXv--COdyXd-3" value="Kiste suchen, verstecken und warten, dass ihr woanderst abgestellt wirst." style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="crSbYHDmSzXv--COdyXd-3" value="Kiste suchen, verstecken und warten, dass ihr woanderst abgestellt wirst." style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="565" y="560" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="crSbYHDmSzXv--COdyXd-5" value="Ausgang suchen" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
+        <mxCell id="crSbYHDmSzXv--COdyXd-5" value="Ausgang suchen" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" parent="1" vertex="1">
           <mxGeometry x="165" y="560" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="crSbYHDmSzXv--COdyXd-7" value="Rausgehen" style="ellipse;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
+        <mxCell id="crSbYHDmSzXv--COdyXd-7" value="Rausgehen" style="ellipse;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" parent="1" vertex="1">
           <mxGeometry x="765" y="560" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="crSbYHDmSzXv--COdyXd-9" value="Drinnen bleiben" style="ellipse;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+        <mxCell id="crSbYHDmSzXv--COdyXd-9" value="Drinnen bleiben" style="ellipse;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
           <mxGeometry x="565" y="720" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="crSbYHDmSzXv--COdyXd-13" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+        <mxCell id="crSbYHDmSzXv--COdyXd-13" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
           <mxGeometry x="165" y="720" width="120" height="80" as="geometry" />
         </mxCell>
       </root>

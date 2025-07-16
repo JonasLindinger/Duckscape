@@ -76,7 +76,7 @@ class StoryManager:
                 return player.strength >= value
             case "intelligenz":
                 return player.intelligence >= value
-            case "luck":
+            case "glück":
                 return player.luck >= value
         return False
 
