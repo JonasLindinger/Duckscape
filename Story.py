@@ -1,7 +1,7 @@
 ﻿from JsonTypes import *
 from JsonReader import *
 from Player import *
-from constants import *
+from Constants import *
 import time
 
 from Utility import Question, Seperate
@@ -28,7 +28,7 @@ class StoryManager:
         # Show dialog
         dialog: str = node.dialog
         dialog = dialog.replace("YOUR_NAME", player.name)
-        dialog = dialog.replace("YOUR_FRIEND_NAME", constants.FRIEND_NAME)
+        dialog = dialog.replace("YOUR_FRIEND_NAME", Constants.FRIEND_NAME)
         print(dialog)
         time.sleep(2)
 
@@ -53,7 +53,7 @@ class StoryManager:
         for choice in node.choices:
             text: str = choice["text"]
             text = text.replace("YOUR_NAME", player.name)
-            text = text.replace("YOUR_FRIEND_NAME", constants.FRIEND_NAME)
+            text = text.replace("YOUR_FRIEND_NAME", Constants.FRIEND_NAME)
             choices.append(text) # Append the choice text (description)
 
         # Ask question / Show choices
