@@ -2,28 +2,28 @@
 {
   "story_nodes": {
     "start": {
-      "dialog": "Kapitel 1: Der Käfig\nDu und YOUR_FRIEND_NAME sind in einem Käfig eingesperrt. Was möchtet ihr tun?",
+      "dialog": "Kapitel 1: Der Käfig\nDu und YOUR_FRIEND_NAME sind in einem Käfig eingesperrt. Wie wollt ihr fliehen?",
       "choices": [
         {
-          "text": "Versuche über den Zaun zu fliegen",
+          "text": "Versucht über den Zaun zu fliegen",
           "next": "try_fly_over"
         },
         {
-          "text": "Fliege auf einen Baum",
+          "text": "Fliegt auf einen Baum",
           "next": "fly_to_tree"
         },
         {
-          "text": "Inspiziere den Zaun",
+          "text": "Inspiziert den Zaun",
           "next": "inspect_fence"
         },
         {
-          "text": "Warte darauf gefüttert zu werden",
+          "text": "Wartet darauf gefüttert zu werden",
           "next": "wait_for_food"
         }
       ]
     },
     "try_fly_over": {
-      "dialog": "Du versuchst über den Zaun zu fliegen, aber es klappt nicht. Du landest wieder im Käfig.",
+      "dialog": "Ihr versucht über den Zaun zu fliegen, aber es klappt nicht. Ihr landet wieder im Käfig.",
       "choices": [
         {
           "text": "Zurück zum Start",
@@ -32,27 +32,27 @@
       ]
     },
     "fly_to_tree": {
-      "dialog": "Du fliegst auf einen Baum. Was möchtest du von hier aus tun?",
+      "dialog": "Ihr fliegt auf einen Baum. Was möchtet ihr von hier aus tun?",
       "choices": [
         {
-          "text": "Fliege über den Zaun",
+          "text": "Fliegt über den Zaun",
           "next": "chapter_2"
         },
         {
-          "text": "Beobachte die Umgebung",
+          "text": "Beobachtet die Umgebung",
           "next": "observe"
         }
       ]
     },
     "observe": {
-      "dialog": "Du beobachtest die Umgebung. Was möchtest du tun?",
+      "dialog": "Ihr beobachtet die Umgebung. Was möchtet ihr tun?",
       "choices": [
         {
-          "text": "Warte auf eine Gelegenheit",
+          "text": "Wartet auf eine Gelegenheit",
           "next": "chapter_2"
         },
         {
-          "text": "Trixe den Wärter aus",
+          "text": "Trixt den Wärter aus",
           "requirements": {
             "intelligenz": 7
           },
@@ -61,14 +61,14 @@
       ]
     },
     "inspect_fence": {
-      "dialog": "Du untersuchst den Zaun genau. Was möchtest du tun?",
+      "dialog": "Ihr untersucht den Zaun genau. Was möchtet ihr tun?",
       "choices": [
         {
-          "text": "Suche nach einem Loch",
+          "text": "Sucht nach einem Loch",
           "next": "chapter_2"
         },
         {
-          "text": "Reiße ein Loch in den Zaun",
+          "text": "Reißt ein Loch in den Zaun",
           "requirements": {
             "staerke": 8
           },
@@ -77,17 +77,17 @@
       ]
     },
     "wait_for_food": {
-      "dialog": "Du wartest darauf, gefüttert zu werden. Was ist dein Plan?",
+      "dialog": "Ihr werdet gefüttert und ein Wärter ist in eurem Gehege.",
       "choices": [
         {
-          "text": "Inspiziere das Tor",
+          "text": "Inspiziert das Tor",
           "requirements": {
             "intelligenz": 6
           },
           "next": "chapter_2"
         },
         {
-          "text": "Greife den Wärter an und stiehl den Schlüssel",
+          "text": "Greift den Wärter an und stehlt den Schlüssel",
           "requirements": {
             "staerke": 9,
             "geschick": 7
@@ -97,7 +97,7 @@
       ]
     },
     "chapter_2": {
-      "dialog": "Kapitel 2: Der Zoo\nDu hast es aus dem Käfig geschafft! Was nun?",
+      "dialog": "Kapitel 2: Der Zoo\nDu und YOUR_FRIEND_NAME habt es aus dem Käfig geschafft! Was nun?",
       "choices": [
         {
           "text": "Kind suchen",
@@ -117,7 +117,7 @@
       ]
     },
     "hide_box": {
-      "dialog": "Du hast eine Kiste gefunden. Was möchtest du tun?",
+      "dialog": "Ihr seit in der Kiste und wurdet ein paar minuten lang weg getragen und abgestellt.",
       "choices": [
         {
           "text": "Rausgehen",
@@ -130,12 +130,12 @@
       ]
     },
     "ending_success": {
-      "dialog": "Gratulation! Du hast es geschafft zu entkommen!",
+      "dialog": "Gratulation! Ihr habt es geschafft zu entkommen!",
       "type": "ending",
       "outcome": "success"
     },
     "ending_caught": {
-      "dialog": "Oh nein! Du wurdest gefangen und zurück in den Käfig gebracht.",
+      "dialog": "Oh nein! Ihr wurdet gefangen und wurdet zurück in den Käfig gebracht.",
       "type": "ending",
       "outcome": "failure"
     }
