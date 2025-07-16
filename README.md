@@ -46,6 +46,6 @@ git clone https://github.com/JonasLindinger/Duckscape.git
 Führen Sie `main.py` aus, um das Spiel zu starten. Folgen Sie den Anweisungen auf dem Bildschirm und treffen Sie Entscheidungen, indem Sie die entsprechenden Optionen auswählen.
 
 ```
-python Duckscape
+cd Duckscape
 python main.py
 ```
