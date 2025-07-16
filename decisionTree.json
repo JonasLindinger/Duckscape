@@ -88,7 +88,7 @@
           "text": "[Du] Lass uns mal zum Tor gehen. Vielleicht ist die Türe nicht abgeschlossen.",
           "requirements": {
             "intelligenz": 6,
-            "glück": 5
+            "glueck": 5
           },
           "next": "chapter_2",
           "failed": "ending_caught"
@@ -97,7 +97,7 @@
           "text": "[Du] Greift den Wärter an und stehlt den Schlüssel",
           "requirements": {
             "staerke": 9,
-            "glück": 3,
+            "glueck": 3,
             "intelligenz": 3
           },
           "next": "chapter_2",
@@ -111,7 +111,7 @@
         {
           "text": "[Du] Lass uns ein Kind suchen...",
           "requirements": {
-            "glück": 8
+            "glueck": 8
           },
           "next": "ending_success_kid",
           "failed": "ending_caught"
