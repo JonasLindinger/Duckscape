@@ -52,14 +52,16 @@
           "requirements": {
             "staerke": 5
           },
-          "next": "chapter_2"
+          "next": "chapter_2",
+          "failed": "ending_caught"
         },
         {
           "text": "[Du] Lass uns den Wärter so ablenken, dass immer einer von uns rüber kann.",
           "requirements": {
             "intelligenz": 7
           },
-          "next": "chapter_2"
+          "next": "chapter_2",
+          "failed": "ending_caught"
         }
       ]
     },
@@ -75,7 +77,8 @@
           "requirements": {
             "staerke": 9
           },
-          "next": "chapter_2"
+          "next": "chapter_2",
+          "failed": "ending_caught"
         }
       ]
     },
@@ -88,7 +91,8 @@
             "intelligenz": 6,
             "glück": 5
           },
-          "next": "chapter_2"
+          "next": "chapter_2",
+          "failed": "ending_caught"
         },
         {
           "text": "[Du] Greift den Wärter an und stehlt den Schlüssel",
@@ -97,7 +101,8 @@
             "glück": 3,
             "intelligenz": 3
           },
-          "next": "chapter_2"
+          "next": "chapter_2",
+          "failed": "ending_caught"
         }
       ]
     },
@@ -109,7 +114,8 @@
           "requirements": {
             "glück": 8
           },
-          "next": "ending_success_kid"
+          "next": "ending_success_kid",
+          "failed": "ending_caught"
         },
         {
           "text": "[Du] Da vorne ist eine Kiste. Lass uns da rein gehen und abwarten",

@@ -3,7 +3,7 @@ from Dialogs import *
 from Story import *
 
 # Run settings
-isDebugRun: bool = True
+isDebugRun: bool = False
 
 # Starting Dialog
 if not isDebugRun:

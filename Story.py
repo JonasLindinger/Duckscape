@@ -35,10 +35,14 @@ class StoryManager:
         # Check if the node is an ending
         if node.type == "ending":
             if node.outcome == "success":
-                print("Player won! TODO: DO ENDING!")
+                print("-----------------")
+                print("Du hast gewonnen!")
+                print("-----------------")
                 pass
             else:
-                print("Player lost! TODO: DO ENDING!")
+                print("-----------------")
+                print("Du hast verloren!")
+                print("-----------------")
                 pass
             return False # Return false, to indicate, that the game is over.
 
@@ -62,9 +66,13 @@ class StoryManager:
         if "requirements" in choice: # Check if there are requirements or not.
             for skill, value in choice["requirements"].items(): # Go throw all the requirements
                 if not self.check_requirement(player, skill, value):
-                    # Todo: Add Ending because the player was caught
-                    print("Player lost! TODO: DO ENDING!")
-                    return False # Return false, to indicate, that the game is over.
+                    if not "failed" in choice:
+                        print("Json didn't account for this. You didn't met the requirements to get here. But no fallback was defined. Define a callback in the json file by using the 'failed' key word.")
+                        return False  # Return false, to indicate, that the game is over.
+                    else:
+                        failed_fallback = choice["failed"]
+                        self.current_node = failed_fallback
+                        return True
 
         self.current_node = choice["next"] # Set the next current node to be the next node, for continuing the game.
         return True
