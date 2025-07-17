@@ -2,7 +2,7 @@
 
 Ein interaktives Text-Adventure-Spiel, in dem Sie eine Ente spielen, die versucht, aus einem Zoo zu entkommen.
 
-> ⚠️ **Hinweis**: Diese README wurde von AI Assistant (powered by anthropic-claude-3.5-sonnet) generiert.
+> ⚠️ **Hinweis**: Diese README wurde von AI Assistant (powered by anthropic-claude-3.5-sonnet) generiert, da ich es für README's sehr Sinnvoll finde, vorallem, da es markdown files sind. Ich habe die KI mit Code Datein gefüttert um sie über das Spiel "aufzuklären".
 
 ## 📋 Inhaltsverzeichnis
 
