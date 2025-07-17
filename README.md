@@ -1,4 +1,4 @@
-# 🦆 Text-Adventure: Die Enten-Flucht
+# 🦆 Text-Adventure: Duckscape
 
 Ein interaktives Text-Adventure-Spiel, in dem Sie eine Ente spielen, die versucht, aus einem Zoo zu entkommen.
 
