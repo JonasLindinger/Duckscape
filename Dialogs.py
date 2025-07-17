@@ -4,6 +4,12 @@ import Player
 from Constants import *
 from Player import *
 
+# -----------------------------------------------
+# Dialog und Story wurde von Chat-GPT inspiriert.
+# Grund: Ich bin nicht Kreativ. Ich kam nur mit der Enten Idee um die Ecke.
+# Wie: Ich habe um eine Grobe Story und Dialoge gefragt und teilweise koppiert / abgeändert.
+# -----------------------------------------------
+
 class Dialog1_Ask_for_name:
     def __init__(self):
         pass

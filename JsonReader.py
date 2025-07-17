@@ -1,5 +1,10 @@
 ﻿import json
 
+# --------------------------------------
+# Json Reading ist stark von Stack Overflow inspiriert, allerdings auch abgeändert für meine Nutzung.
+# KEINE KI
+# --------------------------------------
+
 def Read_Json_File(fileName: str):
     dataToReturn = None
 
