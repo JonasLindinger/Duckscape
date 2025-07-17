@@ -106,7 +106,7 @@
       ]
     },
     "chapter_2": {
-      "dialog": "Kapitel 2: Der Zoo\n ** Du und YOUR_FRIEND_NAME habt es aus dem Käfig geschafft! ** \n[YOUR_FRIEND_NAME] Der größteil ist geschafft. Was jetzt? Wie kommen wir aus dem Zoo raus?",
+      "dialog": "Kapitel 2: Der Zoo\n ** Du und YOUR_FRIEND_NAME habt es aus dem Käfig geschafft! ** \n[YOUR_FRIEND_NAME] Der großteil ist geschafft. Was jetzt? Wie kommen wir aus dem Zoo raus?",
       "choices": [
         {
           "text": "[Du] Lass uns ein Kind suchen...",
